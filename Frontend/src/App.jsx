@@ -6,10 +6,8 @@ import Inicio from './Components/Inicio';
 import NotFound from "./Components/NotFound";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ProtectedRoute from './Components/PrivateRoute';
-import Medicamentos from './Components/Medicamentos';
 import Admin from './Components/Admin';
-import AdministrarPaciente from './Components/AdministrarPaciente';
-import AgregarP from './Components/AgregarP';
+
 
 function App() {
     return (
@@ -33,21 +31,7 @@ function App() {
                         <Inicio />
                     </ProtectedRoute>
                 } />
-                <Route path="/Medicamentos" element={
-                    <ProtectedRoute allowedRoles={['USER']}>
-                        <Medicamentos />
-                    </ProtectedRoute>
-                } />
-                <Route path="/AdministrarPaciente" element={
-                    <ProtectedRoute allowedRoles={['USER']}>
-                        <AdministrarPaciente />
-                    </ProtectedRoute>
-                } />
-                <Route path="/AgregarP" element={
-                    <ProtectedRoute allowedRoles={['USER']}>
-                        <AgregarP />
-                    </ProtectedRoute>
-                } />
+
                 
 
                 {/* RUTA NO ENCONTRADA */}
